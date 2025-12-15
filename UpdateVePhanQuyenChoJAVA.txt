@@ -1,0 +1,38 @@
+Các bảng liên quan đến sản phẩm
+
+
+Bảng Brands 1
+
+Bảng Categories 1
+
+Bảng Products 1
+
+-------------------------
+
+
+Các bảng liên quan đến người dùng và phân quyền
+
+Bảng Roles 1
+
+Bảng Accounts 1
+
+Bảng Admins 1
+
+
+------------------------------
+
+Các bảng về đơn hàng
+
+Bảng Orders 1
+
+Bảng Orderdetails 1
+
+Bảng Customers 1
+
+------------------------------
+
+xoa customer
+xoa admin
+xoa order
+
+
