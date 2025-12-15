@@ -15,7 +15,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Sceen_SignIn extends JFrame {
+public class Register_JFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField txtemail;
@@ -32,7 +32,7 @@ public class Sceen_SignIn extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Sceen_SignIn frame = new Sceen_SignIn();
+					Register_JFrame frame = new Register_JFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -44,7 +44,7 @@ public class Sceen_SignIn extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Sceen_SignIn() {
+	public Register_JFrame() {
 		setTitle("Đăng ký");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(610, 565);

@@ -10,7 +10,7 @@ import javax.swing.SwingConstants;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 
-public class Sceen_LogIn extends JFrame {
+public class LogIn_JFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JTextField txtemail;
@@ -24,7 +24,7 @@ public class Sceen_LogIn extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Sceen_LogIn frame = new Sceen_LogIn();
+					LogIn_JFrame frame = new LogIn_JFrame();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class Sceen_LogIn extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Sceen_LogIn() {
+	public LogIn_JFrame() {
 		setTitle("Đăng nhập");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(389, 240);
