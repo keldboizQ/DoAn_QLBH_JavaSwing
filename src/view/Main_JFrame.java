@@ -21,9 +21,16 @@ public class Main_JFrame extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+        Category_JPanel category_JPanel = new Category_JPanel();
+        contentPanel.add(category_JPanel, "CATEGORY");
         contentPanel.add(new Category_JPanel(), "CATEGORY");
+
+        
+        JPanel panel = new JPanel();
+        category_JPanel.add(panel);
         contentPanel.add(new Brand_JPanel(), "BRAND");
         contentPanel.add(new Products_JPanel(), "PRODUCT");
+        contentPanel.add(new SearchProducts_JPanel(), "SEARCH");
 
         getContentPane().add(contentPanel, BorderLayout.CENTER);
 
@@ -37,8 +44,13 @@ public class Main_JFrame extends JFrame {
         menuDanhMuc.add(mnuBrand);
 
         JMenu menuProduct = new JMenu("Sản phẩm");
-        JMenuItem mnuProduct = new JMenuItem("Quản lý sản phẩm");
+        JMenuItem mnuProduct = new JMenuItem("Thông tin sản phẩm");
+        JMenuItem mnuSearch = new JMenuItem("Tra cứu sản phẩm");
         menuProduct.add(mnuProduct);
+        menuProduct.add(mnuSearch);
+        
+        
+        
         
         JMenu menuSystem = new JMenu("Hệ thống");
         JMenuItem mnuExit = new JMenuItem("Thoát");
@@ -62,6 +74,12 @@ public class Main_JFrame extends JFrame {
         mnuProduct.addActionListener(e ->
             cardLayout.show(contentPanel, "PRODUCT")
         );
+        
+        mnuSearch.addActionListener(e ->
+        cardLayout.show(contentPanel, "SEARCH")
+        );
+        
+        mnuSearch.addActionListener(e -> cardLayout.show(contentPanel,  "PRODUCT"));
 
         mnuExit.addActionListener(e -> System.exit(0));
     }
