@@ -68,6 +68,20 @@ HASHBYTES('SHA2_256', @password + CAST(@salt AS NVARCHAR(36))),
 );
 GO
 
+-- Thêm 1 tài khoản dành cho nhân viên ---- email default là nv, pass 123456
+  
+DECLARE @password NVARCHAR(100) = '123456';
+DECLARE @salt UNIQUEIDENTIFIER = NEWID();
+
+-- Thêm 1 tài khoản dành cho admin ---- email defaul là admin, pass 123 và nhân viên là nv, pass 123456
+
+INSERT INTO ACCOUNTS (email, passwordHash, Salt, id_role) VALUES
+(N'nv', 
+HASHBYTES('SHA2_256', @password + CAST(@salt AS NVARCHAR(36))),
+@salt, 2
+);
+GO  
+
 
 
 ----------------------------------------------------------------------------------
